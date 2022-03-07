@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+display: flex;
+flex-direction:row;
+justify-content: center;
+position: fixed;
+top: 10px;
+}
+
+.headerTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgb(250, 232, 210);
+  font-size: 60px;
+  margin-left: 15px;
+}
+
+.headerImg{
+width: 80px;
+height: 80px;
+border-radius: 50%;
+}
+
+.time-select,
+.sound-picker,
+.player-container {
+  height: 70%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.player-container svg { /*circle svg*/
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); /*play svg (icon) ortalamasını sağladık, rotate(-90deg) ile de circle animasyonun default sağda başlıyordu üstte başlamasını sağladık*/
+  pointer-events: none; /* pointer-events: farenin işlevini yerine getirip getirmeyeceği belirlenir.*/
+  
+}
+
+.replay {
+  position: absolute;
+  height: 30px;
+  bottom: 30%; /* aşağı konumlandırdık*/
+  color:rgb(250, 232, 210);
+}
+
+
+.time-display {
+  position: absolute;
+  bottom: 10%; /* Zaman sayacı, konumu player içindeydi bu sayede aşağı konumlandırdık*/
+  color: rgb(250, 232, 210);
+  font-size: 50px;
+}
+
+video {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -10;
+}
+
+.time-select button, .sound-picker button{
+  color:rgb(250, 232, 210);
+  width: 30%;
+  height: 10%;
+  background: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  transition: all 0.5s ease; /* :hover olunca oluşacak efekt*/
+}
+
+.time-select button:hover {
+  /* color: black;
+  background: white !important; */
+  opacity: 0.4;
+}
+.time-select button:nth-child(1){
+  background-color: #e0b1cb;
+}
+
+.time-select button:nth-child(2){
+  background-color: #be95c4;
+}
+
+.time-select button:nth-child(3){
+  background-color: #9f86c0;
+}
+
+.time-select button:nth-child(4){
+  background-color: #5e548e;
+}
+
+.time-select button:nth-child(5){
+  background-color: #231942;
+}
+
+
+.sound-picker button:hover {
+  opacity: .4;
+}
+
+.sound-picker button:nth-child(1) {
+  background: #e76f51;
+}
+
+.sound-picker button:nth-child(2) {
+  background: #f4a261;
+}
+
+.sound-picker button:nth-child(3) {
+  background: #e9c46a;
+}
+
+.sound-picker button:nth-child(4) {
+  background: #2a9d8f;
+}
+
+.sound-picker button:nth-child(5) {
+  background: #264653;
+}
+
+
+
+/* For Responsive*/
+
+@media only screen and (max-width: 767px ){
+
+  .headerTitle {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+
+ .headerImg {
+display: none;
+  } 
+
+  .time-select button, .sound-picker button{
+width: 105px;
+height: 50px;
+  }
+
+.player-container svg {
+  height: 30%;
+  width: 30%;
+}
+
+.play  {
+  width: 30px;
+  height: 30px;
+}
+
+.time-display {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+
+}
