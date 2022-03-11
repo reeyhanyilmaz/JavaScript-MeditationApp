@@ -75,10 +75,11 @@ video {
   position: fixed;
   left: 0%;
   top: 0%;
-  width: auto;
   width: 100%;
   height: auto;
   z-index: -10;
+  background-color: #000;
+  border-bottom: 1px solid transparent;
 }
 
 .time-select button, .sound-picker button{

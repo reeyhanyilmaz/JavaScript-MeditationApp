@@ -24,10 +24,9 @@ sounds.forEach(sound => {
     song.src = this.getAttribute("data-sound");
     video.src = this.getAttribute("data-video");
     video.setAttribute('playsinline', 'playsinline');
-    checkPlaying(song); // song ve video getir click olunca değiştirme func. çalıştır.
+    checkPlaying(song); // song ve video getir click olunca değiştirme func. çalıştır.  
     });
 });
-
 
  //play sound
  play.addEventListener("click", () => {
