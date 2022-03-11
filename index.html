@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Font -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+    rel="stylesheet"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -21,14 +21,15 @@
   </head>
   <body>
     <div class="app">
-   <div class="header">   
-    <img src="./svg/header.png" alt="headerImg" class="headerImg">
-     <h1 class="headerTitle">Meditation App</h1>   
-    </div>
-     
+      <div class="header">
+        <img src="./svg/header.png" alt="headerImg" class="headerImg" />
+        <h1 class="headerTitle">Meditation App</h1>
+      </div>
+
       <!-- varsayılan background'da bir video dönmesi için bu container -->
       <div class="vid-container">
-        <video loop> <!-- loop sürekli dönmesi için -->         
+        <video loop>
+          <!-- loop sürekli dönmesi için -->
           <source src="./videos/rain.mp4" type="video/mp4" />
         </video>
       </div>
@@ -83,24 +84,40 @@
           />
         </svg>
 
-        <img src="./svg/replay.svg" class="replay">
+        <img src="./svg/replay.svg" class="replay" />
         <h3 class="time-display">0:00</h3>
       </div>
       <!-- Player Container End -->
 
       <!-- Sound Picker Start -->
-      <div class="sound-picker">       
-        <button data-sound="./sounds/rain.mp3" data-video="./videos/rain.mp4">Rain</button>
-        <button data-sound="./sounds/beach.mp3" data-video="./videos/beach.mp4"> Beach</button>    
-        <button data-sound="./sounds/bird.mp3" data-video="./videos/bird.mp4">Bird</button>
+      <div class="sound-picker">
+        <button data-sound="./sounds/rain.mp3" data-video="./videos/rain.mp4">
+          Rain
+        </button>
 
-        <button data-sound="./sounds/piano.mp3" data-video="./videos/piano.mp4"> Piano </button>
+        <button data-sound="./sounds/beach.mp3" data-video="./videos/beach.mp4">
+          Beach
+        </button>
 
-        <button data-sound="./sounds/relaxing.mp3" data-video="./videos/relaxing.mp4"> Relaxing </button>
+        <button data-sound="./sounds/bird.mp3" data-video="./videos/bird.mp4">
+          Bird
+        </button>
+
+        <button data-sound="./sounds/piano.mp3" data-video="./videos/piano.mp4">
+          Piano
+        </button>
+
+        <button data-sound="./sounds/relaxing.mp3" data-video="./videos/relaxing.mp4">
+          Relaxing
+        </button>
+
+        <button data-sound="./sounds/winter.mp3" data-video="./videos/Winter.mp4">
+          Winter
+        </button>
       </div> <!-- Sound Picker End-->
       
     </div> <!-- App div End -->
-   
+    
     <script src="app.js"></script>
   </body>
 </html>

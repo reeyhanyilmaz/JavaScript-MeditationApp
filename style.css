@@ -140,10 +140,12 @@ video {
 }
 
 .sound-picker button:nth-child(5) {
-  background: #264653;
+  background: #457b9d;
 }
 
-
+.sound-picker button:nth-child(6) {
+  background: #264653;
+}
 
 /* For Responsive*/
 
