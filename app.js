@@ -23,7 +23,7 @@ sounds.forEach(sound => {
     sound.addEventListener("click", function(){ 
     song.src = this.getAttribute("data-sound");
     video.src = this.getAttribute("data-video");
-    video.setAttribute('playsinline', 'playsinline');
+    video.setAttribute('playsinline', 'playsinline'); //safari'de videonun inline oynatmasi için.
     checkPlaying(song); // song ve video getir click olunca değiştirme func. çalıştır.  
     });
 });
