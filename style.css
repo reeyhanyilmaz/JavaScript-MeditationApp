@@ -9,32 +9,57 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
+/* header*/
 .header {
-display: flex;
-flex-direction:row;
-justify-content: center;
-position: fixed;
-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
 }
 
-.headerTitle{
+.headerTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:rgb(250, 232, 210);
+  color: rgb(250, 232, 210);
   font-size: 60px;
   margin-left: 15px;
 }
 
-.headerImg{
-width: 80px;
-height: 80px;
-border-radius: 50%;
+.headerImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
+/*sound bilgisi olan section*/
+#soundText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 290px;
+  font-size: 30px;
+  background-color:beige;
+  border-radius: 2px;
+  color: #264653;
+  padding: 6px;
+}
+
+#musicImage {
+  width: 30px;
+  height: 30px;
+  font-weight: thin;
+  margin-left: 6px;
+}
+
+/*middle area*/
 .time-select,
 .sound-picker,
 .player-container {
@@ -46,14 +71,18 @@ border-radius: 50%;
   align-items: center;
 }
 
-.player-container svg { /*circle svg*/
+.sound-picker {
+  height: 80% !important;
+}
+
+.player-container svg {
+  /*circle svg*/
   position: absolute;
   height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg); /*play svg (icon) ortalamasını sağladık, rotate(-90deg) ile de circle animasyonun default sağda başlıyordu üstte başlamasını sağladık*/
   pointer-events: none; /* pointer-events: farenin işlevini yerine getirip getirmeyeceği belirlenir.*/
-  
 }
 
 .play {
@@ -63,8 +92,8 @@ border-radius: 50%;
 .replay {
   position: absolute;
   height: 30px;
-  bottom: 30%; /* aşağı konumlandırdık*/
-  color:rgb(250, 232, 210);
+  bottom: 30%; /*aşağı konumlandırdık*/
+  color: rgb(250, 232, 210);
   cursor: pointer;
 }
 
@@ -86,8 +115,10 @@ video {
   border-bottom: 1px solid transparent;
 }
 
-.time-select button, .sound-picker button{
-  color:rgb(250, 232, 210);
+/*button property*/
+.time-select button,
+.sound-picker button {
+  color: rgb(250, 232, 210);
   width: 30%;
   height: 10%;
   background: none;
@@ -98,65 +129,75 @@ video {
   transition: all 0.5s ease; /* :hover olunca oluşacak efekt*/
 }
 
-.time-select button:hover, .sound-picker button:hover {
-  opacity: .4;
+.time-select button:hover,
+.sound-picker button:hover {
+  opacity: 0.4;
 }
-.time-select button:nth-child(1){
+.time-select button:nth-child(1) {
   background-color: #e0b1cb;
 }
 
-.time-select button:nth-child(2){
+.time-select button:nth-child(2) {
   background-color: #be95c4;
 }
 
-.time-select button:nth-child(3){
+.time-select button:nth-child(3) {
   background-color: #9f86c0;
 }
 
-.time-select button:nth-child(4){
+.time-select button:nth-child(4) {
   background-color: #5e548e;
 }
 
-.time-select button:nth-child(5){
+.time-select button:nth-child(5) {
   background-color: #231942;
 }
 
-.sound-picker button:nth-child(1) {
+.sound-picker button:nth-child(2) {
   background: #e76f51;
 }
 
-.sound-picker button:nth-child(2) {
+.sound-picker button:nth-child(3) {
   background: #f4a261;
 }
 
-.sound-picker button:nth-child(3) {
+.sound-picker button:nth-child(4) {
   background: #e9c46a;
 }
 
-.sound-picker button:nth-child(4) {
+.sound-picker button:nth-child(5) {
   background: #2a9d8f;
 }
 
-.sound-picker button:nth-child(5) {
+.sound-picker button:nth-child(6) {
   background: #457b9d;
 }
 
-.sound-picker button:nth-child(6) {
+.sound-picker button:nth-child(7) {
   background: #264653;
 }
 
-
 /* For Responsive*/
-@media only screen and (max-width: 767px ){
-
+@media only screen and (max-width: 767px) {
   .headerTitle {
     font-size: 40px;
     margin-top: 10px;
   }
 
- .headerImg {
-display: none;
-  } 
+  .headerImg {
+    display: none;
+  }
+
+  #soundText {
+    width: 100px;
+    height: 50;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  #musicImage {
+    display: none;
+  }
 
   video {
     height: 100%;
@@ -164,24 +205,33 @@ display: none;
     display: block;
   }
 
-  .time-select button, .sound-picker button{
-width: 110px;
-height: 50px;
+  .time-select button,
+  .sound-picker button {
+    width: 110px;
+    height: 50px;
   }
 
-.player-container svg {
-  height: 25%;
-  width: 25%;
-}
+  .time-select button {
+    margin-left: 10px;
+  }
+  .player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.play  {
-  width: 25px;
-  height: 25px;
-}
+  .player-container svg {
+    height: 25%;
+    width: 25%;
+  }
 
-.time-display {
-  font-size: 40px;
-  margin-bottom: 30px;
-}
+  .play {
+    width: 25px;
+    height: 25px;
+  }
 
+  .time-display {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
 }
