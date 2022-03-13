@@ -20,13 +20,21 @@ const app = () => {
 
 //farklı sound seçmek için
 sounds.forEach(sound => {
-    sound.addEventListener("click", function(){
+    sound.addEventListener("click", function(){ 
     song.src = this.getAttribute("data-sound");
     video.src = this.getAttribute("data-video");
     video.setAttribute('playsinline', 'playsinline');
     checkPlaying(song); // song ve video getir click olunca değiştirme func. çalıştır.  
     });
 });
+
+// sounds.onloadeddata = function (){
+//     video.style.display = none;
+//     let s=this;
+//     setTimeout(function (){
+//         s.style.display = block;
+//     },100);
+// };
 
  //play sound
  play.addEventListener("click", () => {
@@ -46,9 +54,22 @@ sounds.forEach(sound => {
 timeSelect.forEach(option => {
     option.addEventListener("click", function(){
         fakeDuration = this.getAttribute("data-time");
-        timeDisplay.textContent = `${Math.floor(fakeDuration / 60)} : ${Math.floor(fakeDuration % 60)}`
+        timeDisplay.textContent = `${pad(Math.floor(fakeDuration / 60) )} : ${ pad (Math.floor(fakeDuration % 60) ) }`
     });   
 });
+
+        // 00:00 şeklinde olsun diye yazıldı
+        function pad(val){
+            const valString = val + "";
+            if(valString.length <2){
+                return "0" + valString
+            } else {
+                return valString;
+            }
+        };
+
+
+
 
 const checkPlaying = song => {
      
@@ -68,8 +89,8 @@ const checkPlaying = song => {
 song.ontimeupdate = () => {
  let currentTime = song.currentTime;
  let elapsed = fakeDuration - currentTime;
- let seconds = Math.floor(elapsed % 60) ; // saniye cinsinden göstermesi için.
- let minutes = Math.floor(elapsed / 60); 
+ let seconds = pad (Math.floor(elapsed % 60) ); // saniye cinsinden göstermesi için.
+ let minutes = pad (Math.floor(elapsed / 60) ); 
 
 
 //circle progress

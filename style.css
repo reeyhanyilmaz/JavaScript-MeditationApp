@@ -56,13 +56,17 @@ border-radius: 50%;
   
 }
 
+.play {
+  cursor: pointer;
+}
+
 .replay {
   position: absolute;
   height: 30px;
   bottom: 30%; /* aşağı konumlandırdık*/
   color:rgb(250, 232, 210);
+  cursor: pointer;
 }
-
 
 .time-display {
   position: absolute;
@@ -94,10 +98,8 @@ video {
   transition: all 0.5s ease; /* :hover olunca oluşacak efekt*/
 }
 
-.time-select button:hover {
-  /* color: black;
-  background: white !important; */
-  opacity: 0.4;
+.time-select button:hover, .sound-picker button:hover {
+  opacity: .4;
 }
 .time-select button:nth-child(1){
   background-color: #e0b1cb;
@@ -117,11 +119,6 @@ video {
 
 .time-select button:nth-child(5){
   background-color: #231942;
-}
-
-
-.sound-picker button:hover {
-  opacity: .4;
 }
 
 .sound-picker button:nth-child(1) {
@@ -148,8 +145,8 @@ video {
   background: #264653;
 }
 
-/* For Responsive*/
 
+/* For Responsive*/
 @media only screen and (max-width: 767px ){
 
   .headerTitle {
