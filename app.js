@@ -8,6 +8,9 @@ const app = () => {
   const timeDisplay = document.querySelector(".time-display");
   const timeSelect = document.querySelectorAll(".time-select button");
   const outlineLength = outline.getTotalLength();
+  const soundText = document.querySelector("#soundText");
+  const name = document.querySelector(".sound-picker button");
+  const musicImage = document.querySelector("#musicImage");
 
   //duration (data-time)
   let fakeDuration = 600;
@@ -19,13 +22,7 @@ const app = () => {
   //farklı sound seçmek için
   sounds.forEach((sound) => {
     sound.addEventListener("click", function () {
-      this.children[0].classList.remove("hidden");
-
-      for (let i = 0; i < sounds.length; i++) {
-        sounds[i].name !== this.name &&
-          sounds[i].children[0].classList.add("hidden");
-      }
-
+      soundText.innerHTML = "Playing: " + this.getAttribute("name") + `<img src="./svg/music.svg" alt="musicImage" id="musicImage">`;
       song.src = this.getAttribute("data-sound");
       video.src = this.getAttribute("data-video");
       video.setAttribute("playsinline", "playsinline"); //safari'de videonun inline oynatmasi için.
@@ -43,6 +40,7 @@ const app = () => {
   });
 
   const restartSong = (song) => {
+    let currentTime = song.currentTime;
     song.currentTime = 0;
   };
 

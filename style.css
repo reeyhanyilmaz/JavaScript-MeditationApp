@@ -36,16 +36,43 @@
   border-radius: 50%;
 }
 
+/*sound bilgisi olan section*/
+#soundText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 290px;
+  font-size: 30px;
+  background-color:beige;
+  border-radius: 2px;
+  color: #264653;
+  padding: 6px;
+}
+
+#musicImage {
+  width: 30px;
+  height: 30px;
+  font-weight: thin;
+  margin-left: 6px;
+}
+
 /*middle area*/
 .time-select,
 .sound-picker,
 .player-container {
   height: 70%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  flex: 1;
+}
+
+.sound-picker {
+  height: 80% !important;
 }
 
 .player-container svg {
@@ -89,15 +116,6 @@ video {
 }
 
 /*button property*/
-.musicImage {
-  position: absolute;
-  top: 3px;
-  right: 5px;
-  width: 16px;
-  height: 16px;
-  font-weight: thin;
-}
-
 .time-select button,
 .sound-picker button {
   color: rgb(250, 232, 210);
@@ -109,18 +127,12 @@ video {
   font-size: 20px;
   border: none;
   transition: all 0.5s ease; /* :hover olunca oluşacak efekt*/
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .time-select button:hover,
 .sound-picker button:hover {
-  opacity: 0.7;
+  opacity: 0.4;
 }
-
 .time-select button:nth-child(1) {
   background-color: #e0b1cb;
 }
@@ -141,35 +153,28 @@ video {
   background-color: #231942;
 }
 
-button[name="Rain"] {
+.sound-picker button:nth-child(2) {
   background: #e76f51;
 }
 
-button[name="Beach"] {
+.sound-picker button:nth-child(3) {
   background: #f4a261;
 }
 
-button[name="Bird"] {
+.sound-picker button:nth-child(4) {
   background: #e9c46a;
 }
 
-button[name="Piano"] {
+.sound-picker button:nth-child(5) {
   background: #2a9d8f;
 }
 
-button[name="Relaxing"] {
+.sound-picker button:nth-child(6) {
   background: #457b9d;
 }
 
-button[name="Winter"] {
+.sound-picker button:nth-child(7) {
   background: #264653;
-}
-
-/* hakan */
-/* .selectedButton {
-} */
-.hidden {
-  visibility: hidden !important;
 }
 
 /* For Responsive*/
@@ -180,6 +185,17 @@ button[name="Winter"] {
   }
 
   .headerImg {
+    display: none;
+  }
+
+  #soundText {
+    width: 100px;
+    height: 50;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  #musicImage {
     display: none;
   }
 
