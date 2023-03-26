@@ -165,15 +165,12 @@ button[name="Winter"] {
   background: #264653;
 }
 
-/* hakan */
-/* .selectedButton {
-} */
 .hidden {
   visibility: hidden !important;
 }
 
 /* For Responsive*/
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .headerTitle {
     font-size: 40px;
     margin-top: 10px;
@@ -212,6 +209,10 @@ button[name="Winter"] {
   .play {
     width: 25px;
     height: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .time-display {
