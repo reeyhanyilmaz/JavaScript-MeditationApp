@@ -213,6 +213,8 @@ button[name="Winter"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 50%;
+    bottom: 50%;
   }
 
   .time-display {
